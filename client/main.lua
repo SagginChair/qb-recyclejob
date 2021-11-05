@@ -80,7 +80,7 @@ Citizen.CreateThread(function ()
                     if #(pos - vector3(packagePos.x, packagePos.y, packagePos.z)) < 2.3 then
                         DrawText3D(packagePos.x,packagePos.y,packagePos.z+ 1, "~g~E~w~ - Pack Package")
                         if IsControlJustReleased(0, 38) then
-                            QBCore.Functions.Progressbar("pickup_reycle_package", "Pick Up The Package ..", math.random(4000, 6000), false, true, {
+                            QBCore.Functions.Progressbar("pickup_reycle_package", "Pick Up The Package ..", math.random(7000, 9000), false, true, {
                                 disableMovement = true,
                                 disableCarMovement = true,
                                 disableMouse = false,
@@ -99,7 +99,7 @@ Citizen.CreateThread(function ()
                         if IsControlJustReleased(0, 38) then
                             DropPackage()
                             ScrapAnim()
-                            QBCore.Functions.Progressbar("deliver_reycle_package", "Unpacking The Package", 5000, false, true, {
+                            QBCore.Functions.Progressbar("deliver_reycle_package", "Unpacking The Package", 10000, false, true, {
                                 disableMovement = true,
                                 disableCarMovement = true,
                                 disableMouse = false,
