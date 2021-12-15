@@ -14,7 +14,7 @@ RegisterServerEvent("qb-recycle:server:getItem")
 AddEventHandler("qb-recycle:server:getItem", function()
     local src = source
     local Player = QBCore.Functions.GetPlayer(src)
-    for i = 1, math.random(2, 4), 1 do
+    for i = 1, math.random(2, 5), 1 do
         local randItem = ItemTable[math.random(1, #ItemTable)]
         local amount = math.random(25, 45)
         Player.Functions.AddItem(randItem, amount)
@@ -23,15 +23,15 @@ AddEventHandler("qb-recycle:server:getItem", function()
     end
 
     local chance = math.random(1, 100)
-    if chance < 7 then
-        Player.Functions.AddItem("markedbills", 4, false)
+    if chance < 10 then
+        Player.Functions.AddItem("markedbills", 5, false)
         TriggerClientEvent('inventory:client:ItemBox', src, QBCore.Shared.Items["markedbills"], "add")
     end
 
     local Luck = math.random(1, 10)
     local Odd = math.random(1, 10)
     if Luck == Odd then
-        local random = math.random(5, 10)
+        local random = math.random(5, 15)
         Player.Functions.AddItem("electronics", random)
         TriggerClientEvent('inventory:client:ItemBox', src, QBCore.Shared.Items["electronics"], 'add')
     end
