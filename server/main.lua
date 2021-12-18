@@ -31,7 +31,7 @@ AddEventHandler("qb-recycle:server:getItem", function()
     local Luck = math.random(1, 10)
     local Odd = math.random(1, 10)
     if Luck == Odd then
-        local random = math.random(5, 15)
+        local random = math.random(1, 2)
         Player.Functions.AddItem("electronics", random)
         TriggerClientEvent('inventory:client:ItemBox', src, QBCore.Shared.Items["electronics"], 'add')
     end
